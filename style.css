@@ -52,10 +52,15 @@ body {
   color: white;
   font-size: 30px;
 }
-.video {
-  width: 600px;
+.asterisco {
+  font-weight: bolder;
+  color: red;
 }
-.imagen {
+.aclaracion {
+  font-size: 20px;
+}
+
+.imagen, .video {
   width: 450px;
   margin: 10px;
   border-radius: 15px;
