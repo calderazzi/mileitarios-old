@@ -1,10 +1,7 @@
 body {
-  background-color: rgb(99, 88, 182);
-  color: white;
+  background-color: #9696DA;
 }
-.imgMileitarios {
-  text-align: center;
-}
+
 .container {
   text-align: center;
 }
@@ -12,24 +9,25 @@ body {
   text-align: justify;
 }
 
-.mileitarios, .bandera {
-  width: 250px;
-}
-.bandera {
+.fondo {
   position: absolute;
-  left: 30px;
-  top: 10px;
-  border-radius: 20px;
+  width: 99%;
+  height: 100%;
+  z-index: -1;
+}
+
+.botones {
+  height: 70px;
 }
 .btn {
   position: absolute;
-  right: 20px;
   top: 20px;
-  padding: 10px;
+  left: 300px;
+  padding: 12px;
   background-color: rgb(107, 43, 149);
   color: white;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
   border-radius: 20px;
   box-shadow: 2px 2px 10px black;
   font-weight: bolder;
@@ -39,20 +37,12 @@ body {
   border: 2px solid black;
 }
 .redes {
-  top: 90px;
-  right: 45px;
-}
-.botonCentral {
-  padding: 15px;
-  background-color: blue;
-  border-radius: 15px;
-  margin: 10px;
+  left: 600px;
 }
 .quienesSomos {
-  position: relative;
-  display: contents;
-  font-size: 23px;
+  left: 850px;
 }
+
 
 .ralla-superior {
   background-color: white;
@@ -64,7 +54,6 @@ body {
 }
 
 .parrafo {
-  color: white;
   font-size: 22px;
   margin: 0 300px;
 }
@@ -77,11 +66,21 @@ body {
 }
 
 .imagen, .video {
+  display: none;
   width: 350px;
   height: 400px;
   margin: 10px;
   border-radius: 15px;
   box-shadow: 7px 7px 10px black;
+  animation: aparece 5s;
+}
+@keyframes aparece {
+  from {
+      width: 0;
+  }
+  to {
+      width: 350px;
+  }
 }
 .foto4 {
   height: 300px;
@@ -97,7 +96,7 @@ footer {
 }
 .area-donaciones {
   width: 500px;
-  border: 6px solid blue;
+  border: 2px solid blue;
   border-radius: 20px;
   font-size: 20px;
   padding: 20px;
@@ -108,14 +107,15 @@ h2 {
 }
 a {
   text-decoration: none;
-  color: rgb(55, 248, 255);
+  color: blue;
+  background-color: rgba(128, 128, 128, 0.703);
 }
 .whatsapp {
-  position: fixed;
-  width:40px;
-	height:40px;
-	bottom:40px;
-	right:40px;
+  position: absolute;
+  width: 40px;
+	height: 40px;
+	top: 20px;
+	left: 40px;
 }
 @media only screen and (max-width: 1500px) {
   .parrafo {
@@ -124,17 +124,28 @@ a {
   .area-donaciones {
     margin: 10px 27vw;
   }
+  .btn {
+    left: 200px;
+  }
+  .redes {
+    left: 500px;
+  }
+  .quienesSomos {
+    left: 700px;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .parrafo {
     margin: 0 100px;
 }
-  .mileitarios, .bandera {
-    width: 200px;
-  }
-
   .btn {
-    padding: 5px;
+    left: 150px;
+  }
+  .redes {
+    left: 350px;
+  }
+  .quienesSomos {
+    left: 550px;
   }
   .area-donaciones {
     margin: 10px 20vw;
@@ -143,19 +154,22 @@ a {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  .btn {
+    left: 100px;
+  }
+  .redes {
+    left: 250px;
+  }
+  .quienesSomos {
+    left: 400px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .parrafo {
     margin: 0 2px;
 }
-  .mileitarios, .bandera {
-    width: 100px;
-  }
-  .bandera {
-    left: 5px;
-  }
-  .imgMileitarios {
-    text-align: center;
-  }
   .parrafo {
     font-size: 18px;
   }
@@ -170,21 +184,34 @@ a {
     margin: 10px 10vw;
   }
   .btn {
-    font-size: 12px;
-    top: 8px;
+    padding: 7px;
+    left: 90px;
   }
   .redes {
-    top: 40px;
-    right: 40px;
+    left: 225px;
   }
-  .whatsapp {
-    right: 5px;
-    bottom: 80px;
+  .quienesSomos {
+    left: 355px;
   }
+
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
   .area-donaciones {
     margin: 10px 0vw;
+  }
+  .whatsapp {
+    left: 5px;
+  }
+  .btn {
+    padding: 5px;
+    font-size: 12px;
+    left: 50px;
+  }
+  .redes {
+    left: 150px;
+  }
+  .quienesSomos {
+    left: 245px;
   }
 }
